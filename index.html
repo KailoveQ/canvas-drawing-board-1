@@ -6,31 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>画板</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 
 <body>
-    <div id="canvas">
-
-    </div>
+    <canvas id="canvas" width="100" height="100">
+    </canvas>
     <script>
-
-        canvas.onmousemove = (e) => {
-            console.log(e)
-            console.log(e.layerX)
-            console.log(e.layerY)
-            /**console.log  调试大法*/
-            let div = document.createElement('div')
-            div.style.position = 'absolute'
-            div.style.left = e.layerX - 5 + 'px'
-            div.style.top = e.layerY - 5 + 'px'
-
-            div.style.height = '10px'
-            div.style.width = '10px'
-            div.style.background = 'black'
-            canvas.appendChild(div)
-            /*添加一个孩子div*/
+        let canvas = document.getElementById("canvas");
+        canvas.width = document.documentElement.clientWidth
+        canvas.height = document.documentElement.clientHeight
+        let ctx = canvas.getContext("2d");
+        let bz = false
+        ctx.fillStyle = "black";
+        ctx.strokeStyle = 'none'
+        canvas.onmousedown = () => {
+            bz = true
         }
+        canvas.onmousemove = (e) => {
+            if (bz === true) {
+                ctx.beginPath();
+                ctx.arc(e.clientX, e.clientY, 10, 0, 2 * Math.PI);
+                ctx.stroke();
+                ctx.fill();
+            }
+            else {
+                console.log('没点住')
+            }
+        }
+        canvas.onmouseup = () => {
+            bz = false
+        }
+
+
+
     </script>
 
 </body>
