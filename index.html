@@ -5,9 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>画板</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
+    <div id="canvas">
+
+    </div>
+    <script>
+
+        canvas.onmousemove = (e) => {
+            console.log(e)
+            console.log(e.layerX)
+            console.log(e.layerY)
+            /**console.log  调试大法*/
+            let div = document.createElement('div')
+            div.style.position = 'absolute'
+            div.style.left = e.layerX - 5 + 'px'
+            div.style.top = e.layerY - 5 + 'px'
+
+            div.style.height = '10px'
+            div.style.width = '10px'
+            div.style.background = 'black'
+            canvas.appendChild(div)
+            /*添加一个孩子div*/
+        }
+    </script>
 
 </body>
 
