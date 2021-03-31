@@ -1,3 +1,2 @@
-# canvas
-项目预览
-https://logansheng.github.io/canvas/index.html
+# Canvas 简易画板
+## [项目预览](https://kailoveq.github.io/canvas-drawing-board-1/)
