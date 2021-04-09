@@ -21,6 +21,7 @@ canvas.eraser{
 	cursor: url("./eraser.png"), default;
 }
 aside{
+	margin-top: 8px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -41,11 +42,16 @@ aside > *{
 	display: block;
 	border-radius: 5px;
 }
+aside > input{
+	border: 1px none black;
+	border-bottom-style: solid;
+}
 aside > *:hover{
 	cursor: pointer;
 }
 button,a{
 	width: 80px;
+	border: 1px solid #696666;
 }
 a{
 	color: #333;
