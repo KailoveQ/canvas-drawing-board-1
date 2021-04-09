@@ -1,36 +1,23 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
-<link href="./style.css" rel="stylesheet">
-<meta charset="UTF-8">
-<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-      name="viewport">
-<title>简易画板</title>
-<canvas height=300 id="xxx" width=300></canvas>
-<div class="actions" id=actions>
-    <svg class="active icon" id=pen>
-        <use xlink:href="#icon-pen"></use>
-    </svg>
-    <svg class="icon" id=eraser>
-        <use xlink:href="#icon-erase"></use>
-    </svg>
-    <svg class="icon" id=clear>
-        <use xlink:href="#icon-clear"></use>
-    </svg>
-    <svg class="icon" id=download>
-        <use xlink:href="#icon-save"></use>
-    </svg>
-</div>
-<ol class="colors">
-    <li class="red active" id="red"></li>
-    <li class="green" id="green"></li>
-    <li class="blue" id="blue"></li>
-</ol>
-<ol class="sizes">
-    <li class="thin" id="thin"></li>
-    <li class="thick" id="thick"></li>
-</ol>
-
-<script src="./main.js"></script>
-<script src="//at.alicdn.com/t/font_478967_6n4o5i5mnff4unmi.js"></script>
-
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+	<title>Captain's canvas</title>
+    <link rel="icon" href="favicon.ico" type="image/ico">
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<aside>
+		<a download class="download">download</a>
+		<button class="reset">reset</button>
+		<button class="eraser">eraser</button>
+		<button class="brush">brush</button>
+		<button class="pen">pen</button>
+		<button class="pencil">pencil</button>
+		<input type="color" class="color">
+	</aside>
+	<canvas></canvas>
+	<script src="./script.js"></script>
+</body>
 </html>

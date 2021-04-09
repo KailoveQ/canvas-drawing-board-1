@@ -1,80 +1,59 @@
-ul,ol{list-style: none;}
-*{margin:0;padding:0;}
-.icon {
-    width: 1em; height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-}
-#xxx{
-    display: block;
-    background: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
 body{
-    overflow: hidden;
+	margin: 0;
+	overflow: hidden;
 }
-
-.actions{
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 20px;
+canvas{
+	position: relative;
+	background: #eee;
+	box-sizing: border-box;
+	cursor: url("./pencil.png"), default;
 }
-.actions svg{
-    width: 1.5em;
-    height: 1.5em;
-    transition: all 0.3s;
-    margin: 0 10px;
+canvas.pencil{
+	cursor: url("./pencil.png"), default;
 }
-.actions svg.active{
-    fill: red;
-    transform: scale(1.2);
+canvas.pen{
+	cursor: url("./pen.png"), default;
 }
-.colors{
-    position: fixed;
-    top: 60px;
-    left: 28px;
+canvas.brush{
+	cursor: url("./brush.png"), default;
 }
-.colors> li{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    box-shadow: 0 0 3px rgba(0,0,0,0.25);
-    margin: 10px 0;
-    transition: all 0.3s;
+canvas.eraser{
+	cursor: url("./eraser.png"), default;
 }
-.colors> li.red{
-    background: red;
+aside{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	z-index: 999;
 }
-.colors> li.green{
-    background: green;
+aside > *{
+	font-size: 14px;
+	font-family: Arial;
+	font-weight: bold;
+	margin: 0 5px;
+	color: #333;
+	float: right;
+	height: 30px;
+	border: none;
+	outline: none;
+	display: block;
+	border-radius: 5px;
 }
-.colors> li.blue{
-    background: blue;
+aside > *:hover{
+	cursor: pointer;
 }
-.colors> li.active{
-    box-shadow: 0 0 3px rgba(0,0,0,0.95);
-    transform: scale(1.2);
+button,a{
+	width: 80px;
 }
-.sizes {
-    position: fixed;
-    right: 20px;
-    top: 10px;
-}
-.sizes > li {
-    margin: 20px 0;
-}
-.sizes > .thin{
-    height: 0;
-    width: 20px;
-    border-top: 3px solid black;
-}
-.sizes > .thick{
-    height: 0;
-    width: 20px;
-    border-top: 6px solid black;
+a{
+	color: #333;
+	height: 30px;
+	text-align: center;
+	border-radius: 5px;
+	line-height: 30px;
+	display: inline-block;
+	background: #DCDCDC;
+	text-decoration: none;
 }
