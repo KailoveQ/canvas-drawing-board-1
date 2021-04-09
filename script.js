@@ -106,55 +106,55 @@ function selectTool(){
 		changeCanvasClassName("pencil");
 	};
 	pencil.onmouseenter = function(evt){
-		hoverChangeBackground(pencil,"铅笔");
+		hoverChangeBackground(pencil,"pencil");
 	}
 	pencil.onmouseleave = function(){
-		unhoverChangeBackground(pencil,"pencil");
+		unhoverChangeBackground(pencil,"铅笔");
 	}
 	pen.onclick = function(){
 		changeCanvasClassName("pen");
 	};
 	pen.onmouseenter = function(){
-		hoverChangeBackground(pen,"钢笔");
+		hoverChangeBackground(pen,"pen");
 	};
 	pen.onmouseleave = function(){
-		unhoverChangeBackground(pen,"pen");
+		unhoverChangeBackground(pen,"钢笔");
 	};
 	brush.onclick = function(){
 		changeCanvasClassName("brush");
 	};
 	brush.onmouseenter = function(){
-		hoverChangeBackground(brush,"毛笔");
+		hoverChangeBackground(brush,"brush");
 	};
 	brush.onmouseleave = function(){
-		unhoverChangeBackground(brush,"brush");
+		unhoverChangeBackground(brush,"毛笔");
 	};
 	eraser.onclick = function(){
 		changeCanvasClassName("eraser");
 	}
 	eraser.onmouseenter = function(){
-		eraser.innerText = "橡皮擦";
+		eraser.innerText = "eraser";
 	}
 	eraser.onmouseleave = function(){
-		eraser.innerText = "eraser";
+		eraser.innerText = "橡皮擦";
 	}
 	reset.onclick = function(){
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 	}
 	reset.onmouseenter = function(){
-		reset.innerText = "清空画板";
+		reset.innerText = "reset";
 	}
 	reset.onmouseleave = function(){
-		reset.innerText = "reset";
+		reset.innerText = "清空画板";
 	}
 	download.onclick = function(){
 		download.href = canvas.toDataURL();
 	}
 	download.onmouseenter = function(){
-		download.innerText = "下载图片";
+		download.innerText = "download";
 	}
 	download.onmouseleave = function(){
-		download.innerText = "download";
+		download.innerText = "下载图片";
 	}
 	function changeCanvasClassName(className){
 		canvas.className = className;
